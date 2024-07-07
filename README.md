@@ -6,11 +6,13 @@ sudo apt install python3-pip -y
 sudo apt install -y python3-libcamera python3-kms++
 
 pip3 install Flask picamera2 adafruit-circuitpython-pca9685 adafruit-circuitpython-motor
+
 #if there is a problem with the installation
 
 sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
 
 #then run it again
+
 pip3 install Flask picamera2 adafruit-circuitpython-pca9685 adafruit-circuitpython-motor
 
 sudo apt install -y i2c-tools python3-smbus
