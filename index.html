@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diy Yari</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .slider-container {
+            margin: 20px 0;
+            width: 600px;  /* Changed to 600px */
+        }
+        input[type="range"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Diy Yari</h1>
+    <img src="{{ url_for('video_feed') }}" style="width: 640px; height: 480px;">
+    <div class="slider-container">
+        <label for="servo"> </label>
+        <input type="range" id="servo" name="servo" min="0" max="180" value="90" oninput="updateServo(this.value)">
+        <span id="servoValue">90</span>
+    </div>
+    <script>
+        let servoTimeout;
+
+        function updateServo(value) {
+            document.getElementById('servoValue').innerText = value;
+            clearTimeout(servoTimeout);
+            servoTimeout = setTimeout(() => {
+                fetch('/set_servo', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: 'angle=' + value
+                });
+            }, 50);  // 50ms delay
+        }
+    </script>
+</body>
+</html>
