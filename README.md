@@ -17,6 +17,8 @@ pip3 install Flask picamera2 adafruit-circuitpython-pca9685 adafruit-circuitpyth
 
 sudo apt install -y i2c-tools python3-smbus
 
-save the cam.py file to a new folder for example camera 
+save the cam.py file to a new folder for example "camera"
+
 index.html to the folder camera/templates/index.html, 
+
 then do: python3 app.py
