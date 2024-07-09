@@ -1,3 +1,10 @@
+https://www.realvnc.com/en/connect/download/viewer/?lai_sr=5-9&lai_sl=l
+
+commands for setting up remote access to the system
+Sudo apt-get install realvnc-vnc-server realvnc-vnc-viewer
+Ifconfig (IP address check)
+
+
 these commands must be entered in the Rasberry PI environment to install the necessary libraries
 
 sudo apt update
