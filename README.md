@@ -10,8 +10,11 @@ Ifconfig (IP address check)
 these commands must be entered in the Rasberry PI environment to install the necessary libraries
 
 sudo apt update
+
 sudo apt upgrade -y
+
 sudo apt install python3-pip -y
+
 sudo apt install -y python3-libcamera python3-kms++
 
 pip3 install Flask picamera2 adafruit-circuitpython-pca9685 adafruit-circuitpython-motor
