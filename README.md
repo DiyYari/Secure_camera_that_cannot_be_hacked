@@ -33,4 +33,4 @@ save the cam.py file to a new folder for example "camera"
 
 index.html to the folder camera/templates/index.html, 
 
-then do: python3 app.py
+then do: python3 camera.py
